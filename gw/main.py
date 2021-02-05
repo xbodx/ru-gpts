@@ -1,3 +1,4 @@
+import pathlib
 import sys
 sys.path.append("gw/")
 
@@ -34,7 +35,9 @@ TEST_QUESTION_13 = 'Столица Венесуэлы?'
 TEST_QUESTION_14 = 'Кто лучший сноубордист?'
 TEST_QUESTION_15 = 'Кто выпускает Жигули?'
 
-gpt = RuGPT3XL.from_pretrained("../rugpt3xl", seq_len=512)
+path = pathlib.Path().absolute()
+print(path)
+gpt = RuGPT3XL.from_pretrained(f"../../rugpt3xl", seq_len=512)
 
 async def test_qa(question):
     print(f'Я  > {question}')

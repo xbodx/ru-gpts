@@ -107,3 +107,6 @@ venv.bak/
 
 # MAC
 .DS_Store
+
+# keras
+.keras
