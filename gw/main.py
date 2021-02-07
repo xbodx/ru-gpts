@@ -39,7 +39,7 @@ path = pathlib.Path().absolute()
 print(path)
 gpt = RuGPT3XL.from_pretrained(f"../../rugpt3xl", seq_len=512)
 
-async def test_qa(question):
+def test_qa(question):
     print(f'Я  > {question}')
     answer = gpt.generate(
         question,
@@ -79,6 +79,6 @@ test_qa(SENTENCE_INCENTIVE_12)
 test_qa(TEST_QUESTION_14)
 test_qa(SENTENCE_INCENTIVE_13)
 test_qa(TEST_QUESTION_15)
-drtn = datetime.now() - start
 print(f'-----------------------------------')
-print(f"duration: {duration(drtn)}")
+duration = datetime.now() - start
+print(f"duration: {duration}")
