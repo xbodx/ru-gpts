@@ -83,7 +83,7 @@ celerybeat-schedule
 *.sage.py
 
 # Environments
-.rugpt3xl_env
+.rugpt3xl*_env
 .env
 .venv
 env/
